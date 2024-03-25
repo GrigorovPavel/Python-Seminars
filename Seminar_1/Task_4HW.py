@@ -15,8 +15,22 @@ if(sum % 6 == 0):
     Petya = sum // 6
     Katya = (sum // 3) * 2
     Sergey = sum // 6
-    print(Petya, Katya, Sergey)
+    print(Petya, Katya, Sergey)   
 else:
     print("Условия неверно!")
 
-# Добавить решение через flag
+
+# Добавить решение через flag (для общегопонимания)
+
+sum = int(input("Введите общее количество журавликов: "))
+flag = True
+while(flag):
+    if(sum % 6 == 0):
+        flag = False
+        Petya = sum // 6
+        Katya = (sum // 3) * 2
+        Sergey = sum // 6
+        print(Petya, Katya, Sergey)
+    else:
+        print("Условия неверно!")
+        flag = False
