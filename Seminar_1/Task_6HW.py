@@ -24,12 +24,13 @@ if(num > 99999 and num < 1000000):
     n5 = num % 10
     num //= 10
     n6 = num % 10
+    sum1 = (n1 + n2 + n3)
+    sum2 = (n4 + n5 + n6)
+    if(sum1 == sum2):
+        print(f"{temp} -> yes")
+    else:
+        print(f"{temp} -> no")
 else:
     print("Число не шестизначное!")
 
-sum1 = (n1 + n2 + n3)
-sum2 = (n4 + n5 + n6)
-if(sum1 == sum2):
-    print(f"{temp} -> yes")
-else:
-    print(f"{temp} -> no")
+
