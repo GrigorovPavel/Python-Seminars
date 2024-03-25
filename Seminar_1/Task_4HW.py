@@ -9,3 +9,14 @@
 24 -> 4 16 4
 60 -> 10 40 10
 """
+
+sum = int(input("Введите общее количество журавликов: "))
+if(sum % 6 == 0):
+    Petya = sum // 6
+    Katya = (sum // 3) * 2
+    Sergey = sum // 6
+    print(Petya, Katya, Sergey)
+else:
+    print("Условия неверно!")
+
+# Добавить решение через flag
