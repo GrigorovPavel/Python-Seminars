@@ -8,3 +8,10 @@ Input: 5
 Output: 120
 """
 
+n = int(input("Введите число: "))
+f = 1
+
+while(n > 1):
+    f = f *n
+    n -=1
+print(f) 
