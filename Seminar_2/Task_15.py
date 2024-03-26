@@ -23,3 +23,8 @@ n1 = min(watermelons)
 n2 = max(watermelons)
 print(n1, n2)
 
+#  Как выгледит функция map() "под капотом"
+watermelon = []
+for elem in s:
+    x = int(elem)
+    watermelon.append(x)
