@@ -15,3 +15,13 @@ while(n > 1):
     f = f *n
     n -=1
 print(f) 
+
+# Добавил решение с помощю РЕКУРСИИ (Функция вызывает сама себя)
+ 
+# def func(n):
+#     if(n == 0):
+#         return 1
+#     return n * func(n - 1)
+    
+# print(func(n))
+    
