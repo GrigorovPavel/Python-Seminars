@@ -26,7 +26,7 @@ numbers = "-20 30 -40 50 10 -10".split()
 length = 0 # текущее число теплых дней подрят
 max_length = 0 # максимальное число теплых дней подрят
 for item in numbers:
-    elem = int(item)
+    elem = int(item) # конвертировали строку в число int(item) и присвоили это значение elem
     if(elem > 0):
         length += 1
     else:
