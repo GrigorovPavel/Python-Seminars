@@ -34,3 +34,22 @@ for item in numbers:
     if(length > max_length):
         max_length = length
 print(max_length)
+
+
+# Ещё вариант решения
+
+day =int(input("Введите количество дней: "))
+
+max_count = 0
+count = 0
+
+for i in range(day): # Повторять day раз
+    temp = int(input("Введите температуру: "))
+    if temp > 0:
+        count += 1
+    else:
+        count = 0
+
+    if count > max_count:
+        max_count = count 
+print(max_count)
