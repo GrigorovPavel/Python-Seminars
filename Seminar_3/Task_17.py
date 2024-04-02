@@ -12,3 +12,13 @@
 lst = list(input("Введите числа через пробел: ").split()) # .split(" * ") указывает что разделитель *. По умолчанию пробел)))
 print(f"Ваш список -> {lst}")
 res = print(f"в списке - {len(set(lst))} уникальных элементов.")
+
+# Решение через цикл for
+
+lst_1 = [1, 1, 2, 0, -1, 3, 4, 4]
+result_lst = [] # пустой список
+for i in lst_1: # для каждого элемента в lst_1
+    if i not in result_lst: # если элемента нет в результирующем списке
+        result_lst.append(i) # добавляем его в список (с помощю функции append())
+print(result_lst)
+print(len(result_lst))
