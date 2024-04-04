@@ -52,3 +52,7 @@ for num in range(len(nums)):
         counter2 +=1
 print(nums)
 print(counter2)
+
+
+# Решение через функцию .count
+print(nums.count(k)) # ишем в списке 'nums' количество элементов 'k' с помощю функции .count
