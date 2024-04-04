@@ -9,23 +9,47 @@
 # 3
 # -> 1
 
-# Решение с известными значениями элементов
-list_1 = [1, 2, 3, 4, 5]
-k = 3
-count = 0
-for i in range(len(list_1)):
-    if list_1[i] == k:
-        count +=1
+import random
 
-print(count)
+# # Решение с известными значениями элементов
+# list_1 = [1, 2, 3, 4, 5]
+# x = 3
+# count = 0
+# for i in range(len(list_1)):
+#     if list_1[i] == x:
+#         count +=1
 
-"""
+# print(count)
+
+
 # ДОДЕЛАТЬ!
 #  Решение через пользовательский ввод
-elem = int(input("Введите количество элементов: "))
-count = 0
-for i in range(elem): # ввод элементов == количеству введенное пользователем
-    lst1 = list(input("Введите значение: ")) # ввод элементов "elem" раз
-"""
+count = int(input("Введите количество элементов: "))
+nums = []
+for i in range(count): # ввод элементов == количеству введенное пользователем
+    # num = list(input("Введите значение: ")) # ввод элементов "elem" раз
+    number = random.randint(1, 10) # или с помощю рандомного ввода
+    nums.append(number) # добавляем в список lst_res новый элемент, каждую итерацию
+k = int(input("Введите искомое число: "))
+nums.append(k)
 
 
+# Далее мы можем пройти либо по элементам списка либо по индексам
+# Рассмотрим оба варианта
+
+#  по элементам
+counter = 0
+for num in nums:
+    if num == k:
+        counter +=1
+print(nums)
+print(counter)
+
+# по индексу
+counter2 = 0
+for num in range(len(nums)):
+    if nums[num] == k:
+        num +=1
+        counter2 +=1
+print(nums)
+print(counter2)
