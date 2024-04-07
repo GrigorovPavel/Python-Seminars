@@ -36,3 +36,18 @@ for i in lst:
     new_result += " "
 print("\n")
 print(new_result)
+
+
+# Решение через список
+result = dict()
+new_result = []
+for i in lst:
+    if i in result.keys():
+        new_result.append(f"{i}_{result[i]}")
+        result[i] += 1
+    else:
+        new_result.append(i)
+        result[i] = 1
+    # new_result += " "
+# print("\n")
+print(" ".join(new_result)) # .join добавляет пробел между элементами
