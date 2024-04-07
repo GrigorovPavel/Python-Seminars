@@ -21,3 +21,18 @@ for i in lst:
     else:
         print(i, end = " ")
         result[i] = 1
+
+
+# Решение через строку
+result = dict()
+new_result = ""
+for i in lst:
+    if i in result.keys():
+        new_result += f"{i}_{result[i]}"
+        result[i] += 1
+    else:
+        new_result += i
+        result[i] = 1
+    new_result += " "
+print("\n")
+print(new_result)
