@@ -16,3 +16,11 @@ def fibonachi(n):
     return fibonachi(n - 1) + fibonachi(n - 2)
 print(fibonachi(7))
 
+# Еще простой пример Рекурсии
+def investor(rub):
+    print(rub)
+    if rub >= 10:
+        return rub
+    return investor(rub + 1)
+
+investor(3)
