@@ -21,10 +21,11 @@ else:
 # Решение через функцию (более правильное)
 def digit(n):
     n = int(input("Введите число: "))
-    for i in range(2, n):
+    for i in range(2, n //2 ): # n//2 для сокращения повторов цикла
         print(i)
         if n % i == 0:
             return "no"
     return "yes"
-        
+       
 print(digit(n))   
+
