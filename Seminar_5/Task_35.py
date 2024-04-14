@@ -29,3 +29,18 @@ def digit(n):
        
 print(digit(n))   
 
+
+# Решение с сокращения повторов цикла
+def digit(n):
+    n = int(input("Введите число: "))
+    for i in range(3, n //2, 2 ): # n//2 для сокращения повторов цикла
+        print(i)
+        if n % 2 == 0:
+            return "no"
+        if n % i == 0:
+            return "no"
+    return "yes"
+       
+print(digit(n))   
+
+# При выводе в консоль видно количество повторений цикла
