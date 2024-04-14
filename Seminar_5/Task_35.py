@@ -8,6 +8,7 @@
 # Input: 5
 # Output: yes 
 
+# В решении не работают числа 1, 11, 111, 1111 и т.д.
 n = int(input("Введите число: "))
 if n == 2 or n == 3 or n == 5 or n == 7:
     print("Число 'Простое' ")
@@ -16,3 +17,12 @@ elif n % 2 == 0 or n % 3 == 0 or n % 5 == 0 or n % 7 == 0:
 else:
     print("Число 'Простое' ")
 
+
+# Решение через функцию (более правильное)
+def digit(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return "no"
+        return "yes"
+        
+print(digit(n))   
