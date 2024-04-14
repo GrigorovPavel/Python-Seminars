@@ -15,23 +15,33 @@ def fibonachi(n):
         return n
     return fibonachi(n - 1) + fibonachi(n - 2)
 
-print(fibonachi(7))
+print(f"7-е число последовательности Фибоначи -> {fibonachi(7)}")
 
 # Еще простой пример Рекурсии
 def investor(rub):
-    print(rub)
+    # print(rub)
     if rub >= 10:
         return rub
     return investor(rub + 1)
 
 investor(9)
 
+# Еще пример Сумма от 0 до n
+def summa(n):
+    # print(n)
+    if n == 0:
+        return n
+    return summa(n - 1) + n
+
+sum = summa(5)
+print(f"Сумма чисел от 1 до 5 -> {sum}")
+
 # Еще пример Факториал
 def factorial(rub):
-    print(rub)
-    if rub == 0:
+    # print(rub)
+    if rub == 1:
         return rub
-    return factorial(rub - 1) + rub
+    return factorial(rub - 1) * rub
 
-summa = factorial(6)
-print(summa)
+sum = factorial(5)
+print(f"Факториал 5! -> {sum}")
