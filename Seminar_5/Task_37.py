@@ -21,5 +21,16 @@ def revers_values(n):
 print(revers_values(n))  
         
 
-
-
+# Решение через random
+import random
+n = int(input("Введите число элементов:"))
+lst = []
+def revers_values(n):
+    num = str(random.randint(1, 10))
+    print(num, end= " ")
+    if n == 1:
+        print("\n") # для наглядности
+        return num
+    return revers_values(n - 1) + " " + num 
+      
+print(revers_values(n))  
