@@ -14,6 +14,7 @@ def fibonachi(n):
     if n - 2 <= 1:
         return n
     return fibonachi(n - 1) + fibonachi(n - 2)
+
 print(fibonachi(7))
 
 # Еще простой пример Рекурсии
@@ -23,4 +24,14 @@ def investor(rub):
         return rub
     return investor(rub + 1)
 
-investor(3)
+investor(9)
+
+# Еще пример Факториал
+def factorial(rub):
+    print(rub)
+    if rub == 0:
+        return rub
+    return factorial(rub - 1) + rub
+
+summa = factorial(6)
+print(summa)
