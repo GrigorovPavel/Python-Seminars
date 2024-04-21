@@ -36,17 +36,17 @@
 def s_orbits(orbits):
     pi = 3,14
     for i in orbits:
-        if i[0] == i[1]:
-            lst_orbits.append(0)
+        if i[0] == i[1]: # проверка для исключения круговых орбит
+            lst_orbits.append(0) # 0 добавляем, чтобы индексы не сместились для дальнейших расчетов
         else:
-            lst_orbits.append(3.14 * i[0] * i[1])
-    return lst_orbits   
+            lst_orbits.append(3.14 * i[0] * i[1]) # вычисляем площадь орбиты
+    return lst_orbits   # возвращаем новый списак с площедями орбит
 
 def find_farthest_orbit(orbits):
-    res = max(lst_orbits)
-    for i in range(len(lst_orbits)):
-        if lst_orbits[i] == res:
-            return orbits[i]
+    res = max(lst_orbits)  # находим максимальную орбиту
+    for i in range(len(lst_orbits)): # проходим по каждой орбите в списке
+        if lst_orbits[i] == res: # если она равна максимальной 
+            return orbits[i] # то возвращаем значение элемента первоночального списка с индексом максимального элемента в списке площадей
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 lst_orbits = []
